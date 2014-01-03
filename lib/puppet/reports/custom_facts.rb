@@ -56,7 +56,7 @@ Puppet::Reports.register_report(:custom_facts) do
     request.open_timeout = 2
     request.read_timeout = 2
     request.use_ssl      = true
-    request.verify_mode  = OpenSSL::SSL::VERIFY_NONE
+    request.verify_mode  = OpenSSL::SSL::VERIFY_PEER
 
     begin
       facts = YAML.load(request.get("/#{config[:environment]}/facts/#{client}",
