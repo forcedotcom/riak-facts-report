@@ -1,0 +1,9 @@
+---
+:master_host : puppet.site.com # hostname for your puppet master
+:master_port : 8140            # puppet inventory service port
+:environment : production      # puppet development environment
+:riak_host   : riak.site.com   # riak server hostname
+:riak_port   : 8098            # riak server portname
+:exclude_facts:                # custom facts to exclude
+  - sshdsakey
+  - sshrsakey
